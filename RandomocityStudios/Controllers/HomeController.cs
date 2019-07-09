@@ -44,7 +44,7 @@ namespace RandomocityStudios.Controllers
         public IActionResult Resume()
         {
             string webRootPath = _hostingEnvironment.WebRootPath;
-            var stream = new FileStream(webRootPath+@"\files\test.pdf", FileMode.Open);
+            var stream = new FileStream(webRootPath+@"\files\wvk_resume_apr_2019.pdf", FileMode.Open);
             return new FileStreamResult(stream, "application/pdf");
         }
 
