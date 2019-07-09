@@ -33,7 +33,7 @@ namespace RandomocityStudios.Controllers
         /// </summary>
         public IActionResult Projects()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Coming Soon!";
 
             return View();
         }
