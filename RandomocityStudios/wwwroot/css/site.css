@@ -4,6 +4,10 @@ body {
     padding-top: 50px;
     padding-bottom: 20px;
     background-color: #222222;
+    background-image: url(../images/background_texture.jpg);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: 100px 100px;
 }
 
 /* Wrapping element */
@@ -39,4 +43,32 @@ body {
 
 .large-top-margin {
     margin-top: 35px;
+}
+
+li {
+    color: #9d9d9d;
+}
+
+a {
+    color: #006600;
+}
+
+h1, h2, h3, h4, h5, h6, h7, p {
+    color: #F5F5F5
+}
+
+.navbar-inverse .navbar-brand {
+    color: #006600;
+}
+
+.row {
+    background-color: #222222;
+    margin-top: 35px;
+    border-color: #006600;
+    border-style: groove;
+    border-width: 5px;
+}
+
+.carousel-caption p {
+    color: #F5F5F5
 }
