@@ -1,33 +1,47 @@
-﻿@model  RandomocityStudios.Models.Project
+﻿@model RandomocityStudios.Models.Project
 
 @{
     ViewData["Title"] = "Projects";
 }
+
+<div class="alert alert-success large-top-margin text-center" role="alert">
+    Coming Soon! Projects will be listed here once deployed and accessable for public access.
+</div>
+
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 text-center">
         <h2>@ViewData["Title"]</h2>
     </div>
 </div>
 
 <div class="row">
-    <div class="col-md-12">
-        <h3>Coming Soon!</h3>
-        <br />
-        <p>I will be porting over previous projects in the near future for displaying here</p>
+    <div class="col-md-12 text-center">
 
+
+        <!--  TODO: iterate over projects list and use project model properties for content once backend is done -->
         @for (int i = 0; i < 3; i++)
         {
-            for (int k = 0; k < 3; k++)
-            {
-                <div class="col-md-4">
-                    <div class="row">
-                        <br /><br />
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="~/images/background_texture.jpg" height="200px" width="100%" />
+                    </div>
+
+                    <div class="col-md-8 text-left pull-left">
                         <h4>Project Placeholder</h4>
-                        <br /><br />
+                        <p>
+                            <b>Description:</b> this is a placeholder description that will be used to give a brief synopsis of the project.
+                            The description might span multiple lines, so this placeholder text needs to be very verbose for design purposes.
+                        </p>
+                        <p>
+                            <b>Technologies:</b> placeholder for the tech stack used for this project
+                        <p>
+                            <b>Source code:</b> available upon request
+                        </p>
                     </div>
                 </div>
-            }
+            </div>
         }
     </div>
-
-    </div>
+    <br />
+</div>
