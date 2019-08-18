@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RandomocityStudios.Models
 {
+    // TODO: Use an ORM once there are too many projects to manage in json
     public class Project
     {
         public Project() { }
@@ -18,6 +19,9 @@ namespace RandomocityStudios.Models
             Title = (string)jsonProject["title"];
             ImagePath = (string)jsonProject["imagepath"];
             Description = (string)jsonProject["description"];
+            Url = (string)jsonProject["url"];
+            Source = (string)jsonProject["source"];
+            Tech = (string)jsonProject["tech"];
         }
 
         public int Id { get; set; }
@@ -27,5 +31,11 @@ namespace RandomocityStudios.Models
         public string ImagePath { get; set; }
 
         public string Description { get; set; }
+
+        public string Source { get; set; }
+
+        public string Url { get; set; }
+
+        public string Tech { get; set; }
     }
 }
