@@ -1,0 +1,8 @@
+Randomocitystudios/obj/*
+Randomocitystudios/bin/*
+*.psd
+*.swp
+*.sh
+*.out
+*.user
+.vs/
