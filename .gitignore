@@ -1,5 +1,6 @@
 Randomocitystudios/obj/*
 Randomocitystudios/bin/*
+Randomocitystudios/Properties/PublishProfiles
 *.psd
 *.swp
 *.sh
