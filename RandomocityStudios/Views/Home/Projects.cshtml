@@ -19,24 +19,31 @@
 
 
         <!--  TODO: iterate over projects list and use project model properties for content once backend is done -->
-        @for (int i = 0; i < 3; i++)
+        @foreach (Project project in ViewData["Projects"] as List<Project>)
         {
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="~/images/background_texture.jpg" height="200px" width="100%" />
+                        <img src="@project.ImagePath" height="200px" width="100%" />
                     </div>
 
                     <div class="col-md-8 text-left pull-left">
-                        <h4>Project Placeholder</h4>
+                        @if (project.Url != null && project.Url.Length > 0)
+                        {
+                            <a href="@project.Url" target="_blank"><h4>@project.Title</h4> </a>
+                        }
+                        else
+                        {
+                            <h4>@project.Title</h4>
+                        }
+
                         <p>
-                            <b>Description:</b> this is a placeholder description that will be used to give a brief synopsis of the project.
-                            The description might span multiple lines, so this placeholder text needs to be very verbose for design purposes.
+                            <b>Description:</b> @project.Description
                         </p>
                         <p>
-                            <b>Technologies:</b> placeholder for the tech stack used for this project
+                            <b>Technologies:</b> @project.Tech
                         <p>
-                            <b>Source code:</b> available upon request
+                            <b>Source code:</b> <a href="@project.Source" target="_blank">@project.Source</a>
                         </p>
                     </div>
                 </div>
