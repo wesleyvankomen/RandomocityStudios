@@ -24,5 +24,5 @@ setInterval(function () {
         currentImage = 1;
     else
         currentImage++;
-}, 1000);
+}, 500);
 
