@@ -4,7 +4,7 @@ body {
     padding-top: 50px;
     padding-bottom: 20px;
     background-color: #222222;
-    background-image: url(/images/background_texture.jpg);
+    background-image: url(/images/background_texture_new.jpg);
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: 100px 100px;
@@ -58,7 +58,8 @@ li {
 h1, h2, h3, h4, h5, h6, h7, p {
     color: #F5F5F5;
 }
-    /* link effects */
+
+/* link effects */
     a {
     color: #009933;
 }
@@ -76,7 +77,18 @@ a:hover {
 .nav > li > a > img:hover {
     /*border-color: #00CC33;*/
     border-color: #FFF;
+    background-color: #009933;
 }
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    background-image: linear-gradient(#222222, #009933, #222222);
+    color: #F5F5F5;
+}
+
+    .navbar-inverse .navbar-nav > .active > a:hover {
+        color: #222222;
+    }
+
 
 .navbar-inverse .navbar-brand {
     color: #009933
@@ -133,3 +145,6 @@ a:hover {
     padding-left: 5px;
     padding-right: 5px;
 }
+
+
+

@@ -29,3 +29,31 @@ setInterval(function () {
 }, 500);
 
 */
+
+//$(document).ready(function () {
+//    var pageName = window.location.pathname;
+//    var newPageName = pageName;
+
+//    if (pageName.indexOf('/') == 0) {
+//        newPageName = pageName.substring(1, pageName.length);
+
+//        $.each($('#navbar').find('li'), function () {
+//            var hrefVal = $(this).find('a').attr('href');
+
+//            if (hrefVal.indexOf(newPageName) >= 0) {
+//                $(this).addClass('active').siblings().removeClass('active');
+//            }
+
+//        });
+//    }
+//});
+
+$(document).ready(function () {
+    var url = window.location;
+    $('.navbar .nav').find('.active').removeClass('active');
+    $('.navbar .nav li a').each(function () {
+        if (this.href == url) {
+            $(this).parent().addClass('active');
+        }
+    });
+});
