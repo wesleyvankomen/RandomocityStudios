@@ -2,21 +2,30 @@
   "projects": [
     {
       "id": 1,
+      "title": "Monte Carlo Simulator",
+      "description": "A windows application that uses the Monte Carlo method for experimentally calculating the value of pi. Different experiment parameters can be used to see how this affects the approximation result.",
+      "tech": "C#, .NET Framework, WPF",
+      "imagepath": "/images/projects/monte_carlo_simulator.jpg",
+      "source": "https://github.com/wesleyvankomen/MonteCarloSimulator",
+      "url": ""
+    },
+    {
+      "id": 2,
       "title": "Turtle Memory Game",
-      "description": "A memory game like the classic handheld simon game.",
+      "description": "A memory game where colored turtles light up in a randomly ordered pattern, then the player must click the turtles in the same order as the original pattern. The game has 20 levels, which get progressively faster as more steps are added to the pattern. I built this game in a weekend after being inspired by a very simple JavaScript based simon game I had found on CodePen.",
       "tech": "JavaScript, JQuery, HTML, CSS",
       "imagepath": "/images/projects/turtle_memory_game.jpg",
       "source": "https://github.com/wesleyvankomen/TurtleMemoryGame",
       "url": ""
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "WWU CBE Calculator",
-      "description": "A chrome extension create for the College of Business of Economics as part of my college senior project.",
+      "description": "A chrome extension for calculating the GPAs of students in the College of Business of Economics based on specific set of classes. This was part of my senior project at WWU, and I acted as the team lead for phase 2 development, having three other students on my development team. Our team provided several bug fixes, added user-friendly printer support, updated the grade replacement rules specific based on CBE policy change, and wrote a suite of unit tests to help ensure correctness",
       "tech": "JavaScript, Angular, HTML, CSS, X-Editable",
       "imagepath": "/images/projects/wwu_cbe_calculator.jpg",
       "source": "https://github.com/wesleyvankomen/cbe-calc",
-      "url": ""
+      "url": "https://chrome.google.com/webstore/detail/wwu-cbe-gpa-calculator/lkapdoedojaackmiippolfcncadkfebd?hl=en"
     }
   ]
 }
