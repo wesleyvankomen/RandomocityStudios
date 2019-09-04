@@ -55,16 +55,31 @@ li {
     text-align: left;
 }
 
-a {
-    color: #006600;
-}
-
 h1, h2, h3, h4, h5, h6, h7, p {
     color: #F5F5F5;
 }
+    /* link effects */
+    a {
+    color: #009933;
+}
+
+a:hover {
+    color: #00CC33;
+}
+
+.nav > li > a > img {
+    border: solid;
+    border-width: thin;
+    border-color: transparent;
+}
+
+.nav > li > a > img:hover {
+    /*border-color: #00CC33;*/
+    border-color: #FFF;
+}
 
 .navbar-inverse .navbar-brand {
-    color: #006600;
+    color: #009933
 }
 
 .styled-row {
