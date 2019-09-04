@@ -19,6 +19,7 @@ namespace RandomocityStudios
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseSetting("http_port", "8080")
                 .UseStartup<Startup>();
     }
 }

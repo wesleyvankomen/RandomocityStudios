@@ -10,6 +10,9 @@ using Nancy.Json;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RandomocityStudios.Models;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Net;
 
 namespace RandomocityStudios.Controllers
 {
@@ -71,9 +74,9 @@ namespace RandomocityStudios.Controllers
         /// </summary>
         public IActionResult Resume()
         {
-            string webRootPath = _hostingEnvironment.WebRootPath;
-            var stream = new FileStream(webRootPath+@"/files/wvk_resume_apr_2019.pdf", FileMode.Open);
-            return new FileStreamResult(stream, "application/pdf");
+            string path = _hostingEnvironment.WebRootPath + @"/files/wvk_resume_apr_2019.pdf";
+            var stream = new FileStream(path, FileMode.Open, FileAccess.Read);
+            return File(stream, "application/pdf");
         }
 
         public IActionResult Privacy()
