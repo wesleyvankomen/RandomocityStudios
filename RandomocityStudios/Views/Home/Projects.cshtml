@@ -4,41 +4,54 @@
     ViewData["Title"] = "Projects";
 }
 
-<div class="row">
-    <div class="col-md-12 text-center">
-        <h2>@ViewData["Title"]</h2>
+    <div class="col-sm-12 col-md-12 col-lg-12 styled-row">
+            <h2>@ViewData["Title"]</h2>
     </div>
-</div>
 
-<div class="col-md-12 row">
-    <div class="text-center">
 
-        @foreach (Project project in ViewData["Projects"] as List<Project>)
-        {
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-6">
 
-                        <img src="@project.ImagePath" width="100%" />
-                    </div>
+        <!--    
+         <div class="row display-flex">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="box">
+                    <h3>Some text</h3>
+                    <img src="//placehold.it/150x180" class="center-block">
+                </div>
+            </div>
+        -->
 
-                    <div class="col-md-6 text-left pull-left">
-                        @if (project.Url != null && project.Url.Length > 0)
-                        {
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="row display-flex">
+            @foreach (Project project in ViewData["Projects"] as List<Project>)
+            {
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="styled-row stretch-vertical">
+                    <div>
+                        <center>
+                            @if (project.Url != null && project.Url.Length > 0)
+                                    {
                             <a href="@project.Url" target="_blank"><h4>@project.Title</h4> </a>
-                        }
-                        else
-                        {
+                                    }
+                                    else
+                                    {
                             <h4>@project.Title</h4>
-                        }
+                                    }
+                        </center>
 
-                        <p><b>Description:</b> @project.Description</p>
-                        <p><b>Technologies:</b> @project.Tech</p>
-                        <p><a href="@project.Source" target="_blank"><b>Source code</b></a></p>
+                        <img src="@project.ImagePath" width="100%" class="green-border" />
+
+                        <div class="text-left medium-top-margin">
+                            <p><b>Description:</b></p>
+                            <p class="indent">@project.Description</p>
+
+                            <p><b>Technologies:</b></p>
+                            <p class="indent">@project.Tech</p>
+
+                            <p><a href="@project.Source" target="_blank"><b>Source code</b></a></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        }
+            }
+        </div>
     </div>
-    <br />
-</div>

@@ -45,6 +45,11 @@ body {
     margin-top: 35px;
 }
 
+.medium-top-margin {
+    margin-top: 20px;
+}
+
+
 li {
     color: #9d9d9d;
     text-align: left;
@@ -62,14 +67,18 @@ h1, h2, h3, h4, h5, h6, h7, p {
     color: #006600;
 }
 
-.row {
+.styled-row {
     background-color: #222222;
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     padding: 10px;
     border-color: #006600;
     border-style: groove;
     border-width: 5px;
+}
+
+.stretch-vertical {
+    height: 100%;
 }
 
 .green-border {
@@ -78,12 +87,33 @@ h1, h2, h3, h4, h5, h6, h7, p {
     border-width: 5px;
 }
 
-.main-navigation-icon{
+.main-navigation-icon {
     height: 24px;
     width: auto;
+}
 
+.indent{
+    margin-left: 10px;
 }
 
 .carousel-caption p {
     color: #F5F5F5
+}
+
+
+/* test flex boxes */
+.row.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row.display-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+/* bootstrap padding overrides */
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    padding-left: 5px;
+    padding-right: 5px;
 }
