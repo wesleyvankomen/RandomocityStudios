@@ -1,6 +1,7 @@
 Randomocitystudios/obj/*
 Randomocitystudios/bin/*
 Randomocitystudios/Properties/PublishProfiles
+Randomocitystudios/wwwroot/css/site.min.css
 *.psd
 *.swp
 *.sh
