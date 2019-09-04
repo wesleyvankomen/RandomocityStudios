@@ -10,10 +10,9 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-md-12 text-center">
+<div class="col-md-12 row">
+    <div class="text-center">
 
-        <!--  TODO: iterate over projects list and use project model properties for content once backend is done -->
         @foreach (Project project in ViewData["Projects"] as List<Project>)
         {
             <div class="col-md-12">
@@ -33,14 +32,9 @@
                             <h4>@project.Title</h4>
                         }
 
-                        <p>
-                            <b>Description:</b> @project.Description
-                        </p>
-                        <p>
-                            <b>Technologies:</b> @project.Tech
-                        <p>
-                            <b>Source code:</b> <a href="@project.Source" target="_blank">@project.Source</a>
-                        </p>
+                        <p><b>Description:</b> @project.Description</p>
+                        <p><b>Technologies:</b> @project.Tech</p>
+                        <p><a href="@project.Source" target="_blank"><b>Source code</b></a></p>
                     </div>
                 </div>
             </div>
