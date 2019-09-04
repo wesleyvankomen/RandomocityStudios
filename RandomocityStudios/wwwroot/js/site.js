@@ -3,6 +3,8 @@
 
 // Write your JavaScript code.
 
+/*
+
 const rootPath = '/images/favicon/sun_favicon/sun_favicon_';
 const imageCount = 10;
 var currentImage = 1;
@@ -26,3 +28,4 @@ setInterval(function () {
         currentImage++;
 }, 500);
 
+*/
