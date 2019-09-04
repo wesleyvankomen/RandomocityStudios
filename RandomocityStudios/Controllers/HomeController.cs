@@ -69,9 +69,11 @@ namespace RandomocityStudios.Controllers
             return View();
         }
 
-        /// <summary>
-        /// Returns a pdf resume file stream
-        /// </summary>
+        public IActionResult AboutMe()
+        {
+            return View();
+        }
+
         public IActionResult Resume()
         {
             string path = _hostingEnvironment.WebRootPath + @"/files/wvk_resume_apr_2019.pdf";
