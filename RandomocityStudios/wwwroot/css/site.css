@@ -72,6 +72,18 @@ h1, h2, h3, h4, h5, h6, h7, p {
     border-width: 5px;
 }
 
+.green-border {
+    border-color: #006600;
+    border-style: groove;
+    border-width: 5px;
+}
+
+.main-navigation-icon{
+    height: 24px;
+    width: auto;
+
+}
+
 .carousel-caption p {
     color: #F5F5F5
 }
