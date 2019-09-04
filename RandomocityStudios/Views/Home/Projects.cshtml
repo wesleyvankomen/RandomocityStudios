@@ -4,10 +4,6 @@
     ViewData["Title"] = "Projects";
 }
 
-<div class="alert alert-success large-top-margin text-center" role="alert">
-    Coming Soon! Projects will be listed here once deployed for public access.
-</div>
-
 <div class="row">
     <div class="col-md-12 text-center">
         <h2>@ViewData["Title"]</h2>
@@ -17,17 +13,17 @@
 <div class="row">
     <div class="col-md-12 text-center">
 
-
         <!--  TODO: iterate over projects list and use project model properties for content once backend is done -->
         @foreach (Project project in ViewData["Projects"] as List<Project>)
         {
             <div class="col-md-12">
                 <div class="row">
-                    <div class="col-md-4">
-                        <img src="@project.ImagePath" height="200px" width="100%" />
+                    <div class="col-md-6">
+
+                        <img src="@project.ImagePath" width="100%" />
                     </div>
 
-                    <div class="col-md-8 text-left pull-left">
+                    <div class="col-md-6 text-left pull-left">
                         @if (project.Url != null && project.Url.Length > 0)
                         {
                             <a href="@project.Url" target="_blank"><h4>@project.Title</h4> </a>

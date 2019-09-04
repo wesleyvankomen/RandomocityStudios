@@ -22,6 +22,8 @@
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
+
+            <!-- Navigation Collapser-->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -31,14 +33,33 @@
                 </button>
                 <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">RandomocityStudios</a>
             </div>
+
+            <!-- Page Navigation-->
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav narbar-left">
                     <li><a asp-area="" asp-controller="Home" asp-action="Projects">Projects</a></li>
                 </ul>                
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Resume" target="_blank">Resume</a></li>
-                    <li><a href="https://linkedin.com/in/vankomen" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://github.com/wesleyvankomen" target="_blank">GitHub</a></li>
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="Resume" target="_blank">
+                            <img class="main-navigation-icon" src="~/images/icons/resume_icon.png" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/vankomen" target="_blank">
+                            <img class="main-navigation-icon" src="~/images/icons/linkedin_icon.png" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/wesleyvankomen" target="_blank">
+                            <img class="main-navigation-icon" src="~/images/icons/github_icon.png" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://hackerrank.com/wesleyvankomen" target="_blank">
+                            <img class="main-navigation-icon" src="~/images/icons/hackerrank_icon.png" />
+                        </a>
+                    </li>
                 </ul>
 
             </div>
