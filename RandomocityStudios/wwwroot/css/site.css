@@ -94,6 +94,7 @@ a:hover {
 
 .stretch-vertical {
     height: 100%;
+    min-height: 500px;
 }
 
 .green-border {
