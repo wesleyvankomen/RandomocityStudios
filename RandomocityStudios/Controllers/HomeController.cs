@@ -21,12 +21,14 @@ namespace RandomocityStudios.Controllers
         
         private readonly IHostingEnvironment _hostingEnvironment;
         private readonly string _projectsDataFilePath;
+        private readonly string _webRoot;
         private List<Project> _projects;
 
         public HomeController(IHostingEnvironment hostingEnvironment)
         {
             _hostingEnvironment = hostingEnvironment;
-            _projectsDataFilePath = _hostingEnvironment.WebRootPath + "/files/projectsSeedData.json";
+            _webRoot = _hostingEnvironment.WebRootPath;
+            _projectsDataFilePath = _webRoot + "/files/projectsSeedData.json";
         }
 
         /// <summary>
@@ -71,6 +73,13 @@ namespace RandomocityStudios.Controllers
 
         public IActionResult AboutMe()
         {
+            string directory = _webRoot + "/images/slideshow";
+
+            ViewData["Title"] = "About Me";
+
+            List<string> pictures = Directory.GetFiles(directory, "*.jpg").ToList().Select(x => x.Split(_webRoot)[1]).ToList(); ;
+            ViewData["Pictures"] = pictures;
+
             return View();
         }
 
