@@ -77,6 +77,30 @@ namespace RandomocityStudios.Controllers
 
             ViewData["Title"] = "About Me";
 
+            // retrieve music playlist
+            try
+            {
+                using (StreamReader file = new StreamReader(_webRoot + "/files/music.json"))
+                {
+                    using (JsonTextReader reader = new JsonTextReader(file))
+                    {
+                        JObject jsonObject = (JObject)JToken.ReadFrom(reader);
+                        JToken projectArray = jsonObject.SelectToken("music");
+
+                        string musicPlayerOptions = @"?enablejsapi=1&version=3&playerapiid=ytplayer";
+                        List<string> urls = projectArray.ToObject(typeof(List<string>)) as List<string>;
+
+                        ViewData["Music"] = urls.Select(x => x + musicPlayerOptions).ToList();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Project data could not be successfully parsed");
+            }
+
+
+            // retrieve picture file paths
             List<string> pictures = Directory.GetFiles(directory, "*.jpg").ToList().Select(x => x.Split(_webRoot)[1]).ToList(); ;
             ViewData["Pictures"] = pictures;
 
