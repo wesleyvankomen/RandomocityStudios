@@ -1,5 +1,6 @@
 ﻿@{
     List<string> pictures = ViewData["Pictures"] as List<string>;
+    List<string> music = ViewData["Music"] as List<string>;
 }
 
 
@@ -11,23 +12,31 @@
 
     <!-- Summary Paragraph-->
     <div class="col-lg-6 col-md-6 paragraph">
-        <p>
-            I wrote my first "Hello World" console application over 15 years ago, and a few degrees and a few hundred-thousand lines of code later,
-            I work professionally as a Software Engineer. I live in Bellingham, Washington with my Fiancé, three black cats, and a German Shepherd.
-            Some of my hobbies include longboarding, snowboarding, hiking, biking, motorcycling, canoeing, swimming, gardening, programming (yes, for leisure too!), writing and drawing.
-        </p>
-        <p>
-            I'm a crypto-currency enthusiast, having been running a crypto mining-rig out of my office for a few years now.
-            Blockchain technology has to potential to greatly improve how we transact with each other on a day-to-day basis, and will inevitably replace legacy financial systems.
-            I use my hardware with the intention of contributing to the health of community-based Blockchain networks, but it would be pretty cool to someday have enough earnings to pay for my nieces and nephews college tuition!
-        </p>
-        <p>
-            I'm currently learning about OpenGL and React, and I plan to use them to make a suite of educational games aimed at teaching math and programming skills to children.
-        </p>
+        <h3>Words</h3>
+        <div class="styled-row">
+
+            <p>
+                I wrote my first "Hello World" console application over 15 years ago, and a few degrees and a few hundred-thousand lines of code later,
+                I work professionally as a Software Engineer. I live in Bellingham, Washington with my Fiancé, three black cats, and a German Shepherd.
+                Some of my hobbies include longboarding, snowboarding, hiking, biking, motorcycling, canoeing, swimming, gardening, programming (yes, for leisure too!), writing and drawing.
+            </p>
+            <p>
+                I'm a crypto-currency enthusiast, having been running a crypto mining-rig out of my office for a few years now.
+                Blockchain technology has to potential to greatly improve how we transact with each other on a day-to-day basis, and will inevitably replace legacy financial systems.
+                I use my hardware with the intention of contributing to the health of community-based Blockchain networks, but it would be pretty cool to someday have enough earnings to pay for my nieces and nephews college tuition!
+            </p>
+            <p>
+                I'm currently learning about OpenGL and React, and I plan to use them to make a suite of educational games aimed at teaching math and programming skills to children.
+            </p>
+
+        </div>
+
     </div>
 
     <!-- Slide Show-->
     <div class="col-lg-6 col-md-6">
+
+        <h3>Pictures</h3>
 
             <div class="green-border medium-top-margin">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -61,6 +70,7 @@
                                 </div>
                             }
                         }
+
                     </div>
 
                     <!-- Left and right controls -->
@@ -75,4 +85,75 @@
                 </div>
             </div>
         </div>
+
+    <div class="col-md-6 ">
+
+        <h3>Music</h3>
+
+        <div class="green-border medium-top-margin">
+
+            <div id="musicCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#musicCarousel" data-slide-to="0" class="active"></li>
+
+                    @for (int i = 1; i < music?.Count(); i++){
+                        <li data-target="#myCarousel" data-slide-to="@i"></li>
+                    }
+
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    @for (int i = 0; i < music.Count(); i++)
+                    {
+                        if (i == 0)
+                        {
+                            <div class="item active">
+                                <iframe width="500" height="150" id="youtube_player" class="yt_player_iframe" src="@music[i]" allowfullscreen="false" allowscriptaccess="always" frameborder="0"></iframe>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="item">
+                                <iframe width="500" height="150" id="youtube_player" class="yt_player_iframe" src="@music[i]" allowfullscreen="false" allowscriptaccess="always" frameborder="0"></iframe>
+                            </div>
+                        }
+                    }
+                </div>
+
+
+                @*<iframe width="560" height="315" src="https://www.youtube.com/embed/pLBmqwA4AGc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>*@
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#musicCarousel" data-slide="prev" id="musicLeft">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+
+                <a class="right carousel-control" href="#musicCarousel" data-slide="next" id="musicRight">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- inline script to auto stop video when the selection is changed and stop auto change-->
+    <script>
+        function stopVideo() {
+            this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+        }
+
+        $('#musicLeft').add('#musicRight').click(function(){
+            $('.yt_player_iframe').each(stopVideo);
+        });
+
+        $('#musicCarousel').carousel({
+            interval: false
+        }); 
+
+    </script>
+
 </div>
