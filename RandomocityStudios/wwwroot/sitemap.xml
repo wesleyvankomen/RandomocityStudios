@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>http://www.RandomocityStudios.com/</loc>
+      <lastmod>2019-09-05</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.2</priority>
+   </url>
+   <url>
+      <loc>http://www.RandomocityStudios.com/AboutMe</loc>
+      <lastmod>2019-09-05</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.2</priority>
+   </url>
+   <url>
+      <loc>http://www.RandomocityStudios.com/Projects</loc>
+      <lastmod>2019-09-05</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+</urlset>
