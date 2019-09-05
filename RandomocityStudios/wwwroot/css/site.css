@@ -10,6 +10,13 @@ body {
     background-size: 100px 100px;
 }
 
+.paragraph p {
+    line-height: 30px;
+    text-align: left;
+    margin: 10px;
+    text-indent: 25px;
+}
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
