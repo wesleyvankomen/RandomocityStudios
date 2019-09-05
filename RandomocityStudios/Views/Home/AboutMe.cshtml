@@ -1,12 +1,15 @@
 ﻿@{
-    ViewData["Title"] = "About Me";
+    List<string> pictures = ViewData["Pictures"] as List<string>;
 }
+
 
 <div class="col-sm-12 col-md-12 col-lg-12 styled-row">
     <h2>@ViewData["Title"]</h2>
 </div>
 
 <div class="col-sm-12 col-md-12 col-lg-12 styled-row">
+
+    <!-- Summary Paragraph-->
     <div class="col-lg-6 col-md-6 paragraph">
         <p>
             I wrote my first "Hello World" console application over 15 years ago, and a few degrees and thousands of lines of code later,
@@ -22,9 +25,61 @@
             I'm more passionate about the more classical computer science, back-end, algorithmic programming, but I find a lot of enjoyment in being able to develop across the entire stack
         </p>
     </div>
+
+    <!-- Slide Show-->
     <div class="col-lg-6 col-md-6">
-        <div class="green-border">
-            <img style="width:100%; height:500px" />
+
+            <div class="green-border">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+
+
+
+                        <!-- link for each picture in slideshow picture -->
+                        @for (int i = 1; i < pictures?.Count(); i++)
+                        {
+                            <li data-target="#myCarousel" data-slide-to="@i"></li>
+                        }
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        @for (int i = 0; i < pictures.Count(); i++)
+                        {
+                            if (i == 0)
+                            {
+                                <div class="item active">
+                                    <img src="@pictures[i]">
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="item">
+                                    <img src="@pictures[i]">
+                                </div>
+                            }
+                        }
+
+                        <div class="item">
+                            <img src="~/images/slideshow/bellingham.jpg">
+                        </div>
+
+
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
 </div>
