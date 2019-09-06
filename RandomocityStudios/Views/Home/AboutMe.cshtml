@@ -16,9 +16,9 @@
 
         <div class="green-border medium-top-margin">
 
-            <div id="musicCarousel" class="carousel slide" data-ride="carousel">
+            <div id="musicCarousel" class="carousel slide medium-bottom-padding medium-top-padding" data-ride="carousel">
                 <!-- Indicators -->
-                <ol class="carousel-indicators top-20">
+                <ol class="carousel-indicators music-carousel-selector">
                     <li data-target="#musicCarousel" data-slide-to="0" class="active"></li>
 
                     @for (int i = 1; i < music?.Count(); i++)
@@ -35,13 +35,13 @@
                         if (i == 0)
                         {
                             <div class="item active">
-                                <iframe width="500" height="150" id="youtube_player" class="yt_player_iframe" src="@music[i]" allowfullscreen="false" allowscriptaccess="always" frameborder="0"></iframe>
+                                <iframe width="75%" height="150" id="youtube_player" class="yt_player_iframe green-border" src="@music[i]" allowfullscreen="false" allowscriptaccess="always" frameborder="0"></iframe>
                             </div>
                         }
                         else
                         {
                             <div class="item">
-                                <iframe width="500" height="150" id="youtube_player" class="yt_player_iframe" src="@music[i]" allowfullscreen="false" allowscriptaccess="always" frameborder="0"></iframe>
+                                <iframe width="75%" height="150" id="youtube_player" class="yt_player_iframe green-border" src="@music[i]" allowfullscreen="false" allowscriptaccess="always" frameborder="0"></iframe>
                             </div>
                         }
                     }
