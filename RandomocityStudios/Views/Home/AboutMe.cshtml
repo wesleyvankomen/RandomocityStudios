@@ -35,13 +35,13 @@
                         if (i == 0)
                         {
                             <div class="item active">
-                                <iframe width="75%" height="150" id="youtube_player" class="yt_player_iframe green-border" src="@music[i]" allowfullscreen="false" allowscriptaccess="always" frameborder="0"></iframe>
+                                <iframe width="75%" height="175" id="youtube_player" class="yt_player_iframe green-border" src="@music[i]" allowfullscreen="false" allowscriptaccess="always" frameborder="0"></iframe>
                             </div>
                         }
                         else
                         {
                             <div class="item">
-                                <iframe width="75%" height="150" id="youtube_player" class="yt_player_iframe green-border" src="@music[i]" allowfullscreen="false" allowscriptaccess="always" frameborder="0"></iframe>
+                                <iframe width="75%" height="175" id="youtube_player" class="yt_player_iframe green-border" src="@music[i]" allowfullscreen="false" allowscriptaccess="always" frameborder="0"></iframe>
                             </div>
                         }
                     }
@@ -145,7 +145,7 @@
             this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
         }
 
-        $('#musicLeft').add('#musicRight').click(function () {
+        $('#musicLeft').add('#musicRight').add(".music-carousel-selector").click(function () {
             $('.yt_player_iframe').each(stopVideo);
         });
 
