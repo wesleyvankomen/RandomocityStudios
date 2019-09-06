@@ -7,7 +7,7 @@
       "tech": "C#, .NET Framework, WPF",
       "imagepath": "/images/projects/monte_carlo_simulator.jpg",
       "source": "https://github.com/wesleyvankomen/MonteCarloSimulator",
-      "url": ""
+      "url": "/images/projects/monte_carlo_simulator.jpg"
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "tech": "JavaScript, JQuery, HTML, CSS",
       "imagepath": "/images/projects/turtle_memory_game.jpg",
       "source": "https://github.com/wesleyvankomen/TurtleMemoryGame",
-      "url": ""
+      "url": "https://wesleyvankomen.github.io/TurtleMemoryGame/"
     },
     {
       "id": 3,
