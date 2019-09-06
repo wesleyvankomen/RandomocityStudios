@@ -27,18 +27,22 @@
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="styled-row stretch-vertical">
                     <div>
-                        <center>
-                            @if (project.Url != null && project.Url.Length > 0)
-                                    {
-                            <a href="@project.Url" target="_blank"><h4>@project.Title</h4> </a>
-                                    }
-                                    else
-                                    {
-                            <h4>@project.Title</h4>
-                                    }
-                        </center>
 
-                        <img src="@project.ImagePath" width="100%" class="green-border" />
+                        @if (project.Url != null && project.Url.Length > 0)
+                        {
+                            <a href="@project.Url" target="_blank">
+                                <h4>@project.Title</h4>
+                                <img src="@project.ImagePath" width="100%" class="green-border" />
+                            </a>
+                        }
+                        else
+                        {
+                            <h4>@project.Title</h4>
+                            <img src="@project.ImagePath" width="100%" class="green-border" />
+                        }
+
+
+
 
                         <div class="text-left medium-top-margin">
                             <p><b>Description:</b></p>
