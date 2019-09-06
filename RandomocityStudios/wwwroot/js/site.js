@@ -1,10 +1,7 @@
 ﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
-// Write your JavaScript code.
-
 /*
-
 const rootPath = '/images/favicon/sun_favicon/sun_favicon_';
 const imageCount = 10;
 var currentImage = 1;
@@ -48,6 +45,11 @@ setInterval(function () {
 //    }
 //});
 
+
+
+
+
+// update active link
 $(document).ready(function () {
     var url = window.location;
     $('.navbar .nav').find('.active').removeClass('active');
