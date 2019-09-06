@@ -10,6 +10,10 @@ body {
     background-size: 100px 100px;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 .paragraph p {
     line-height: 30px;
     text-align: left;
