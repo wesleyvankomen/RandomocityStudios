@@ -53,7 +53,11 @@ body {
 }
 
 .medium-top-margin {
-    margin-top: 20px;
+    margin-top: 25px;
+}
+
+.small-top-margin {
+    margin-top: 15px;
 }
 
 
@@ -167,6 +171,18 @@ a:hover {
 
 .medium-top-padding {
     padding-top: 25px;
+}
+
+.small-top-padding {
+    padding-top: 15px;
+}
+
+.medium-bottom-margin{
+    margin-bottom: 25px;
+}
+
+.small-bottom-margin {
+    margin-bottom: 15px;
 }
 
 
