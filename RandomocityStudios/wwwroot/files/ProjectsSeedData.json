@@ -1,6 +1,14 @@
 ﻿{
   "projects": [
     {
+      "title": "Randomocity Studios",
+      "description": "My personal website that acts as a resume and portfolio of some of my work. You are on this site right now!",
+      "tech": "C#, .Net Core, HTML, CSS, JavaScript, JQuery",
+      "imagepath": "/images/projects/randomocity_studios.jpg",
+      "source": "https://github.com/wesleyvankomen/RandomocityStudios",
+      "url": ""
+    },
+    {
       "title": "Monte Carlo Simulator",
       "description": "A windows application that uses the Monte Carlo method for experimentally calculating the value of pi. Different experiment parameters can be used to see how this affects the approximation result.",
       "tech": "C#, .NET Framework, WPF",
@@ -28,14 +36,9 @@
 
   "news": [
     {
-      
-      "title": "Monte Carlo Simulator",
-      "description": "A windows application that uses the Monte Carlo method for experimentally calculating the value of pi. Different experiment parameters can be used to see how this affects the approximation result.",
-      "tech": "C#, .NET Framework, WPF",
-      "imagepath": "/images/projects/monte_carlo_simulator.jpg",
-      "source": "https://github.com/wesleyvankomen/MonteCarloSimulator",
-      "url": "/images/projects/monte_carlo_simulator.jpg"
-      
+      "title": "Randomocity Studios is live!",
+      "description": "I'm proud to announce that I have officially added enough content for this website to not be empty!It's been great having so much free time to work on personal projects like this website ever since I resigned from my job a month ago!",
+      "imagepath": "/images/projects/monte_carlo_simulator.jpg"
     }
   ]
 
