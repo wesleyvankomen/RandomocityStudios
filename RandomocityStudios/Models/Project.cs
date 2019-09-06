@@ -15,7 +15,6 @@ namespace RandomocityStudios.Models
         {
             JObject jObject = JObject.Parse(json);
             JToken jsonProject = jObject["project"];
-            Id = (int)jsonProject["id"];
             Title = (string)jsonProject["title"];
             ImagePath = (string)jsonProject["imagepath"];
             Description = (string)jsonProject["description"];
@@ -23,8 +22,6 @@ namespace RandomocityStudios.Models
             Source = (string)jsonProject["source"];
             Tech = (string)jsonProject["tech"];
         }
-
-        public int Id { get; set; }
 
         public string Title { get; set; }
 
