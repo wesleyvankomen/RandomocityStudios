@@ -20,15 +20,13 @@ namespace RandomocityStudios.Controllers
     {
         
         private readonly IHostingEnvironment _hostingEnvironment;
-        private readonly string _projectsDataFilePath;
         private readonly string _webRoot;
-        private List<Project> _projects;
 
         public HomeController(IHostingEnvironment hostingEnvironment)
         {
             _hostingEnvironment = hostingEnvironment;
             _webRoot = _hostingEnvironment.WebRootPath;
-            _projectsDataFilePath = _webRoot + "/files/projectsSeedData.json";
+            
         }
 
         /// <summary>
@@ -46,25 +44,26 @@ namespace RandomocityStudios.Controllers
         {
             ViewData["Message"] = "Coming Soon!";
 
+            string _projectsDataFilePath = _webRoot + "/files/projectsSeedData.json";
+            List<Project> _projects = new List<Project>();
+
             // get projects data from json
             // TODO: use a DB instead of json once there are enough projects posts to justify doing so
-            if(_projects == null || _projects.Count == 0)
+            try
             {
-                try
+                using (StreamReader file = new StreamReader(_projectsDataFilePath))
+                using (JsonTextReader reader = new JsonTextReader(file))
                 {
-                    using (StreamReader file = new StreamReader(_projectsDataFilePath))
-                    using (JsonTextReader reader = new JsonTextReader(file))
-                    {
-                        JObject jsonObject = (JObject)JToken.ReadFrom(reader);
-                        JToken projectArray = jsonObject.SelectToken("projects");
-                        _projects = (List<Project>)projectArray.ToObject(typeof(List<Project>));
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Project data could not be successfully parsed");
+                    JObject jsonObject = (JObject)JToken.ReadFrom(reader);
+                    JToken projectArray = jsonObject.SelectToken("projects");
+                    _projects = (List<Project>)projectArray.ToObject(typeof(List<Project>));
                 }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Project data could not be successfully parsed");
+            }
+            
 
             ViewData["Projects"] = _projects;
 
