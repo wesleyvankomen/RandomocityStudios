@@ -3,7 +3,7 @@
     {
       "title": "Randomocity Studios",
       "description": "My personal website that acts as a resume and portfolio of some of my work. You are on this site right now!",
-      "tech": "C#, .Net Core, HTML, CSS, JavaScript, JQuery",
+      "tech": "C#, .Net Core, JavaScript, JQuery, HTML, CSS",
       "imagepath": "/images/projects/randomocity_studios.jpg",
       "source": "https://github.com/wesleyvankomen/RandomocityStudios",
       "url": ""
