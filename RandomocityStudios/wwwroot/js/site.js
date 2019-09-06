@@ -1,6 +1,9 @@
 ﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
+//TODO: Add code for SEO meta tag and page description injection
+
+//TODO: figure out how to cache favicon animation frames, else delete this section
 /*
 const rootPath = '/images/favicon/sun_favicon/sun_favicon_';
 const imageCount = 10;
