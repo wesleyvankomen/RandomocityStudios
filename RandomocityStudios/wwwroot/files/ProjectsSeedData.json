@@ -12,7 +12,7 @@
       "title": "Monte Carlo Simulator",
       "description": "A windows application that uses the Monte Carlo method for experimentally calculating the value of pi. Different experiment parameters can be used to see how this affects the approximation result.",
       "tech": "C#, .NET Framework, WPF",
-      "imagepath": "/images/projects/monte_carlo_simulator.jpg",
+      "imagepath": "/images/projects/monte_carlo_simulator_2.jpg",
       "source": "https://github.com/wesleyvankomen/MonteCarloSimulator",
       "url": ""
     },
