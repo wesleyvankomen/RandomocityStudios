@@ -21,6 +21,15 @@ body {
     text-indent: 25px;
 }
 
+.medium-font{
+    font-size: 1em;
+}
+
+.author{
+    font-size: 12px;
+
+}
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
