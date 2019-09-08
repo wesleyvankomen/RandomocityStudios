@@ -37,10 +37,10 @@
   "updates": [
     {
       "title": "Randomocity Studios is live!",
-      "description": "I'm proud to announce the official relaunch of Randomocity Studios! I've started work on an exciting new project that I hope to launch within the next few months. Check back for updates, because this site is always under construction!",
+      "description": "I'm proud to announce the official relaunch of Randomocity Studios! There are currently four projects available to view, source code and all. I've started work on an exciting new project that I hope to launch within the next few months -- think foundational math education meets turn based rpg. Check back for updates, because this site is always under construction!",
       "imagepath": "/images/updates/bannerUnderContruction.jpg",
       "keywords": [ "launch", "live", "randomocity studios", "randomocity", "first post"],
-      "publishDate": "09/08/2019",
+      "publishDate": "9/8/2019",
       "author": "Wesley"
     }
   ]
