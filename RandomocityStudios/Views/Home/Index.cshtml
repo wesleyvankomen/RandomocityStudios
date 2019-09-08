@@ -19,7 +19,7 @@
 <div class="col-sm-12 col-md-12 col-lg-12">
     <div class="green-border small-top-margin">
 
-        <div id="#updateCarousel" class="carousel slide medium-bottom-padding small-top-padding" data-ride="carousel">
+        <div id="updateCarousel" class="carousel slide carousel-stopped medium-bottom-padding small-top-padding" data-interval="false" data-ride="carousel">
 
             <!-- Indicators -->
             <ol class="carousel-indicators carousel-selector-pull-down small-bottom-margin">
@@ -41,7 +41,6 @@
 
                 <div class="item @(isFirst ? "active": "")">
                     <div class="col-sm-12 col-md-12 col-lg-12">
-
                         <div class="col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
 
                             <div class="col-sm-12 col-md-12 col-lg-12 styled-row">
@@ -72,7 +71,7 @@
             </div>
 
             <!-- Left and right controls -->
-            <a class="left carousel-control hidden-sm hidden-xs"" href="#updateCarousel" data-slide="prev">
+            <a class="left carousel-control hidden-sm hidden-xs" href="#updateCarousel" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left"></span>
                 <span class="sr-only">Previous</span>
             </a>
@@ -81,6 +80,8 @@
                 <span class="glyphicon glyphicon-chevron-right"></span>
                 <span class="sr-only">Next</span>
             </a>
+
         </div>
     </div>
+</div>
 
