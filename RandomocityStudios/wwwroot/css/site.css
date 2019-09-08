@@ -205,5 +205,9 @@ a:hover {
     margin-bottom: 15px;
 }
 
+.carousel-stopped {
+    interval: false
+}
+
 
 
