@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Randomocity Studios";
 
-    List<NewsUpdate> updates = ViewData["Updates"] as List<NewsUpdate>;;
+    List<NewsUpdate> updates = ViewData["Updates"] as List<NewsUpdate>;
 }
 
 
@@ -16,29 +16,67 @@
     <h1>@ViewData["Title"]</h1>
 </div>
 
-
-@foreach(NewsUpdate update in updates){
-
 <div class="col-sm-12 col-md-12 col-lg-12">
+    <div class="green-border small-top-margin">
 
-    <div class="col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 styled-row">
-        <h2 class="medium-bottom-margin">@update.Title</h2>
-        <a href="@update.ImagePath" data-fancybox data-caption="@update.Title">
-            <img class="green-border" src="@update.ImagePath" width="100%" />
-        </a>
+        <div id="#updateCarousel" class="carousel slide medium-bottom-padding small-top-padding" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators carousel-selector-pull-down small-bottom-margin">
+                <li data-target="#updateCarousel" data-slide-to="0" class="active"></li>
+
+                @for (int i = 1; i < updates?.Count(); i++)
+                {
+                <li data-target="#updateCarousel" data-slide-to="@i"></li>
+                }
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
 
 
-        <div class="col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 styled-row">
-            <p class="author">By @update.Author on @update.PublishDate</p>
-            <div class="justify-text paragraph">
-                <p class="medium-font">
-                    @update.Description
-                </p>
+                @foreach(NewsUpdate update in updates){
+
+                <div class="col-sm-12 col-md-12 col-lg-12">
+
+                    <div class="col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+
+                        <div class="col-sm-12 col-md-12 col-lg-12 styled-row">
+                            <h2 class="medium-bottom-margin">@update.Title</h2>
+                        </div>
+
+
+                        <a href="@update.ImagePath" data-fancybox data-caption="@update.Title">
+                            <img class="green-border" src="@update.ImagePath" width="100%" />
+                        </a>
+
+
+                        <div class="col-sm-12 col-md-12 col-lg-12 styled-row">
+                            <p class="author">By @update.Author on @update.PublishDate</p>
+                            <div class="justify-text paragraph">
+                                <p class="medium-font">
+                                    @update.Description
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                }
+
             </div>
 
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#updateCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="right carousel-control" href="#updateCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </div>
-</div>
-
-}
 
