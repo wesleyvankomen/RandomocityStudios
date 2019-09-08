@@ -23,6 +23,7 @@
 
             <!-- Indicators -->
             <ol class="carousel-indicators carousel-selector-pull-down small-bottom-margin">
+
                 <li data-target="#updateCarousel" data-slide-to="0" class="active"></li>
 
                 @for (int i = 1; i < updates?.Count(); i++)
@@ -36,29 +37,32 @@
 
 
                 @foreach(NewsUpdate update in updates){
+                    bool isFirst = updates.IndexOf(update) == 0;
 
-                <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="item @(isFirst ? "active": "")">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
 
-                    <div class="col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+                        <div class="col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
 
-                        <div class="col-sm-12 col-md-12 col-lg-12 styled-row">
-                            <h2 class="medium-bottom-margin">@update.Title</h2>
-                        </div>
-
-
-                        <a href="@update.ImagePath" data-fancybox data-caption="@update.Title">
-                            <img class="green-border" src="@update.ImagePath" width="100%" />
-                        </a>
-
-
-                        <div class="col-sm-12 col-md-12 col-lg-12 styled-row">
-                            <div class="justify-text paragraph">
-                                <p class="medium-font">
-                                    @update.Description
-                                </p>
+                            <div class="col-sm-12 col-md-12 col-lg-12 styled-row">
+                                <h2 class="medium-bottom-margin">@update.Title</h2>
                             </div>
-                            <p class="author small-top-margin">Posted by @update.Author on @update.PublishDate</p>
 
+
+                            <a href="@update.ImagePath" data-fancybox data-caption="@update.Title">
+                                <img class="green-border" src="@update.ImagePath" width="100%" />
+                            </a>
+
+
+                            <div class="col-sm-12 col-md-12 col-lg-12 styled-row">
+                                <div class="justify-text paragraph">
+                                    <p class="medium-font">
+                                        @update.Description
+                                    </p>
+                                </div>
+                                <p class="author small-top-margin">Posted by @update.Author on @update.PublishDate</p>
+
+                            </div>
                         </div>
                     </div>
                 </div>
