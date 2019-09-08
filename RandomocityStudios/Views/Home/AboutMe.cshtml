@@ -3,6 +3,12 @@
     List<string> music = ViewData["Music"] as List<string>;
 }
 
+@section metatags
+{
+    <meta name="description" content="A more personal summary of who I am as a person, and some of the things that I like or find interesting." />
+    <meta name="keywords" content="about me, randomocity studios, wesley van komen, wesley, van komen, about, software engineer, software development, resume, portfolio, .net, c#, javascript" />
+}
+
 
 <div class="col-sm-12 col-md-12 col-lg-12 styled-row">
     <h2>@ViewData["Title"]</h2>
@@ -23,7 +29,7 @@
 
                     @for (int i = 1; i < music?.Count(); i++)
                     {
-                        <li data-target="#musicCarousel" data-slide-to="@i"></li>
+                    <li data-target="#musicCarousel" data-slide-to="@i"></li>
                     }
 
                 </ol>
@@ -34,15 +40,15 @@
                     {
                         if (i == 0)
                         {
-                            <div class="item active">
-                                <iframe width="75%" height="175" id="youtube_player" class="yt_player_iframe green-border" src="@music[i]" allowfullscreen="false" allowscriptaccess="always" frameborder="0"></iframe>
-                            </div>
+                    <div class="item active">
+                        <iframe width="75%" height="175" id="youtube_player" class="yt_player_iframe green-border" src="@music[i]" allowfullscreen="false" allowscriptaccess="always" frameborder="0"></iframe>
+                    </div>
                         }
                         else
                         {
-                            <div class="item">
-                                <iframe width="75%" height="175" id="youtube_player" class="yt_player_iframe green-border" src="@music[i]" allowfullscreen="false" allowscriptaccess="always" frameborder="0"></iframe>
-                            </div>
+                    <div class="item">
+                        <iframe width="75%" height="175" id="youtube_player" class="yt_player_iframe green-border" src="@music[i]" allowfullscreen="false" allowscriptaccess="always" frameborder="0"></iframe>
+                    </div>
                         }
                     }
                 </div>
@@ -63,7 +69,7 @@
             </div>
         </div>
 
-    <!-- Slide Show-->
+        <!-- Slide Show-->
         <h3>Pictures</h3>
 
         <div class="green-border small-top-margin">
@@ -77,7 +83,7 @@
                     <!-- link for each picture in slideshow picture -->
                     @for (int i = 1; i < pictures?.Count(); i++)
                     {
-                        <li data-target="#pictureCarousel" data-slide-to="@i"></li>
+                    <li data-target="#pictureCarousel" data-slide-to="@i"></li>
                     }
                 </ol>
 
@@ -87,19 +93,19 @@
                     {
                         if (i == 0)
                         {
-                        <div class="item active">
-                            <a href="@pictures[i]" data-fancybox="pictures" data-options='{"loop": true}'  data-caption="">
-                                <img src="@pictures[i]">
-                            </a>
-                        </div>
+                    <div class="item active">
+                        <a href="@pictures[i]" data-fancybox="pictures" data-options='{"loop": true}' data-caption="">
+                            <img src="@pictures[i]">
+                        </a>
+                    </div>
                         }
                         else
                         {
-                        <div class="item">
-                             <a href="@pictures[i]" data-fancybox="pictures" data-options='{"loop": true}' data-caption="">
-                                <img src="@pictures[i]">
-                            </a>
-                        </div>
+                    <div class="item">
+                        <a href="@pictures[i]" data-fancybox="pictures" data-options='{"loop": true}' data-caption="">
+                            <img src="@pictures[i]">
+                        </a>
+                    </div>
                         }
                     }
 
