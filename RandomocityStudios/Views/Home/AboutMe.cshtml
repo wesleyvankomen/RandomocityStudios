@@ -22,7 +22,7 @@
 
         <div class="green-border small-top-margin">
 
-            <div id="musicCarousel" class="carousel slide medium-bottom-padding small-top-padding" data-ride="carousel">
+            <div id="musicCarousel" class="carousel slide medium-bottom-padding small-top-padding" data-interval="false" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators carousel-selector-pull-down">
                     <li data-target="#musicCarousel" data-slide-to="0" class="active"></li>
@@ -70,7 +70,7 @@
         <h3>Pictures</h3>
 
         <div class="green-border small-top-margin">
-            <div id="pictureCarousel" class="carousel slide" data-ride="carousel">
+            <div id="pictureCarousel" class="carousel slide" data-interval="3500" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     <li data-target="#pictureCarousel" data-slide-to="0" class="active"></li>
@@ -123,9 +123,9 @@
 
 
     <!-- Summary Paragraph-->
-    <div class="col-lg-6 col-md-6 paragraph left-text">
+    <div class="col-lg-6 col-md-6 paragraph">
         <h3>Words</h3>
-        <div class="styled-row">
+        <div class="styled-row left-text">
             <p>
                 I'm a first generation college graduate with a passion for technology and using it to solve problems. I'm the youngest of five kids, and currently have fourteen nieces and nephews.
                 I live in Bellingham, WA with my Fiancé, three black cats, and German Shepherd.
@@ -161,16 +161,6 @@
         $('#musicLeft').add('#musicRight').add(".carousel-selector-pull-down").click(function () {
             $('.yt_player_iframe').each(stopVideo);
         });
-
-        //TODO: move to style sheet
-        $('#musicCarousel').carousel({
-            interval: false
-        });
-
-        $('#pictureCarousel').carousel({
-            interval: 3500
-        });
-
     </script>
 
 </div>
