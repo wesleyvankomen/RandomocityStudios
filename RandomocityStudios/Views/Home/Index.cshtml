@@ -1,6 +1,10 @@
 ﻿@{
     ViewData["Title"] = "Randomocity Studios";
+
+    List<NewsUpdate> updates = ViewData["Updates"] as List<NewsUpdate>;;
 }
+
+
 
 @section metatags
 {
@@ -9,17 +13,32 @@
 }
 
 <div class="col-sm-12 col-md-12 col-lg-12 styled-row">
-    <h2>@ViewData["Title"]</h2>
+    <h1>@ViewData["Title"]</h1>
 </div>
 
-<div class="col-sm-12 col-md-12 col-lg-12 styled-row">
-    <h3>Check back later for additional content</h3>
-    <br />
 
-    <a href="~/images/bannerUnderContruction.jpg" data-fancybox data-caption="Under Construction!">
-        <img class="green-border" src="~/images/bannerUnderContruction.jpg" width="100%" />
-    </a>
+@foreach(NewsUpdate update in updates){
 
-    <br />
-    <h4>(Under Construction)</h4>
-</div>
+<div class="col-sm-12 col-md-12 col-lg-12">
+
+    <div class="col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 styled-row">
+        <h2 class="medium-bottom-margin">@update.Title</h2>
+        <a href="@update.ImagePath" data-fancybox data-caption="@update.Title">
+            <img class="green-border" src="@update.ImagePath" width="100%" />
+        </a>
+
+
+            <div class="col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 small-top-margin styled-row">
+                <p>By @update.Author on @update.PublishDate</p>
+                <div class="paragraph">
+                    <p class="medium-font paragraph">
+                        @update.Description
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+}
+
