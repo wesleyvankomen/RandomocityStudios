@@ -16,17 +16,24 @@ body {
 
 .paragraph p {
     line-height: 30px;
-    text-align: left;
     margin: 10px;
     text-indent: 25px;
 }
 
 .medium-font{
-    font-size: 1em;
+    font-size: 1.5em;
+}
+
+.justify-text{
+    text-align: justify;
+}
+
+.left-text {
+    text-align: left;
 }
 
 .author{
-    font-size: 12px;
+    font-size: 1em;
 
 }
 
