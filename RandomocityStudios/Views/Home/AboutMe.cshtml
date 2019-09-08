@@ -17,14 +17,14 @@
 <div class="col-sm-12 col-md-12 col-lg-12 styled-row">
 
     <!-- music player -->
-    <div class="col-md-6 ">
+    <div class="col-md-6">
         <h3>Music</h3>
 
         <div class="green-border small-top-margin">
 
-            <div id="musicCarousel" class="carousel slide medium-bottom-padding small-top-padding small-bottom-padding" data-ride="carousel">
+            <div id="musicCarousel" class="carousel slide medium-bottom-padding small-top-padding" data-ride="carousel">
                 <!-- Indicators -->
-                <ol class="carousel-indicators music-carousel-selector">
+                <ol class="carousel-indicators carousel-selector-pull-down">
                     <li data-target="#musicCarousel" data-slide-to="0" class="active"></li>
 
                     @for (int i = 1; i < music?.Count(); i++)
@@ -52,9 +52,6 @@
                         }
                     }
                 </div>
-
-
-                @*<iframe width="560" height="315" src="https://www.youtube.com/embed/pLBmqwA4AGc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>*@
 
                 <!-- Left and right controls -->
                 <a class="left carousel-control" href="#musicCarousel" data-slide="prev" id="musicLeft">
@@ -161,7 +158,7 @@
             this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
         }
 
-        $('#musicLeft').add('#musicRight').add(".music-carousel-selector").click(function () {
+        $('#musicLeft').add('#musicRight').add(".carousel-selector-pull-down").click(function () {
             $('.yt_player_iframe').each(stopVideo);
         });
 
