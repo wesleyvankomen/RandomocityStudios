@@ -4,26 +4,32 @@
     ViewData["Title"] = "Projects";
 }
 
-    <div class="col-sm-12 col-md-12 col-lg-12 styled-row">
-            <h2>@ViewData["Title"]</h2>
+@section metatags
+{
+    <meta name="description" content="A collection of software development projects undertaken by Wesley Van Komen." />
+    <meta name="keywords" content="randomocity studios, wesley van komen, wesley, van komen, software engineer, software development, resume, portfolio, .net, c#, javascript" />
+}
+
+<div class="col-sm-12 col-md-12 col-lg-12 styled-row">
+    <h2>@ViewData["Title"]</h2>
+</div>
+
+
+
+<!--
+ <div class="row display-flex">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="box">
+            <h3>Some text</h3>
+            <img src="//placehold.it/150x180" class="center-block">
+        </div>
     </div>
+-->
 
-
-
-        <!--    
-         <div class="row display-flex">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="box">
-                    <h3>Some text</h3>
-                    <img src="//placehold.it/150x180" class="center-block">
-                </div>
-            </div>
-        -->
-
-    <div class="col-sm-12 col-md-12 col-lg-12">
-        <div class="row display-flex">
-            @foreach (Project project in ViewData["Projects"] as List<Project>)
-            {
+<div class="col-sm-12 col-md-12 col-lg-12">
+    <div class="row display-flex">
+        @foreach (Project project in ViewData["Projects"] as List<Project>)
+        {
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="styled-row stretch-vertical">
                     <div>
@@ -58,6 +64,6 @@
                     </div>
                 </div>
             </div>
-            }
-        </div>
+        }
     </div>
+</div>
