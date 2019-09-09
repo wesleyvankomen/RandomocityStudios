@@ -29,9 +29,6 @@ namespace RandomocityStudios.Controllers
             
         }
 
-        /// <summary>
-        /// Returns a splash page for incoming users
-        /// </summary>
         public IActionResult Index()
         {
 
@@ -61,10 +58,8 @@ namespace RandomocityStudios.Controllers
 
             return View();
         }
-        
-        /// <summary>
-        /// Returns a page with a list of projects
-        /// </summary>
+
+        [Route("/Projects")]
         public IActionResult Projects()
         {
             ViewData["Message"] = "Coming Soon!";
@@ -95,7 +90,8 @@ namespace RandomocityStudios.Controllers
             return View();
         }
 
-        public IActionResult AboutMe()
+        [Route("/About")]
+        public IActionResult About()
         {
             string directory = _webRoot + "/images/slideshow";
 
@@ -131,6 +127,7 @@ namespace RandomocityStudios.Controllers
             return View();
         }
 
+        [Route("/Resume")]
         public IActionResult Resume()
         {
             string path = _hostingEnvironment.WebRootPath + @"/files/wvk_resume_apr_2019.pdf";
