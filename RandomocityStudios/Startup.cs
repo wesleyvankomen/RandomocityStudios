@@ -40,7 +40,7 @@ namespace RandomocityStudios
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                //app.UseDeveloperExceptionPage();
             }
             else
             {
@@ -57,11 +57,6 @@ namespace RandomocityStudios
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
-
-                routes.MapRoute(
-                    "Sitemap",
-                    "sitemap.xml",
-                    new { controller = "Home", action = "SiteMap" });
             });
 
 
