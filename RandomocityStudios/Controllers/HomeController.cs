@@ -13,6 +13,7 @@ using RandomocityStudios.Models;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RandomocityStudios.Controllers
 {
@@ -141,6 +142,8 @@ namespace RandomocityStudios.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        [AllowAnonymous]
+        [Route("/Error")]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
