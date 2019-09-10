@@ -38,19 +38,20 @@ namespace RandomocityStudios
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                //app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-                app.UseHsts();
-            }
-
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseStatusCodePages();
+
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Error");
+                app.UseHsts();
+            }
 
             app.UseMvc(routes =>
             {
@@ -58,7 +59,6 @@ namespace RandomocityStudios
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-
 
         }
     }
