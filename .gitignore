@@ -9,3 +9,4 @@ Randomocitystudios/wwwroot/js/site.min.js
 *.out
 *.user
 .vs/
+*.DS_Store
