@@ -1,5 +1,6 @@
 ﻿User-agent: *
 Disallow:
 Allow: /
+Disallow: /Error
 
 Sitemap: https://www.randomocitystudios.com/sitemap.xml
