@@ -32,6 +32,7 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
+
 </head>
 <body>
 
@@ -56,71 +57,74 @@
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
 
-
     <!-- JS Image Viewer-->
     <link rel="stylesheet" type="text/css" href="~/lib/fancybox/jquery.fancybox.min.css">
-    <script src="~/lib/fancybox/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="~/lib/fancybox/jquery.fancybox.min.js"></script>
+
+    <!-- Particle JS-->
+    <div id="particles-js"></div>
+    <script type="text/javascript" src="~/js/particles/particles.js"></script>
+    <script type="text/javascript" src="~/js/particles/app.js"></script>
 
 
+    @RenderSection("Scripts", required: false)
 
-        @RenderSection("Scripts", required: false)
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
 
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-
-                <!-- Navigation Collapser-->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand" , alt="home link">RandomocityStudios</a>
-                </div>
-
-                <!-- Page Navigation-->
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav narbar-left">
-                        <li><a asp-area="" asp-controller="Home" asp-action="Projects" alt="projects link">Projects</a></li>
-                        <li><a asp-area="" asp-controller="Home" asp-action="About" alt="about me link">About Me</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a asp-area="" asp-controller="Home" asp-action="Resume" target="_blank" alt="resume link">
-                                <img class="main-navigation-icon" src="~/images/icons/resume_icon.png" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://linkedin.com/in/vankomen" target="_blank" alt="linked link">
-                                <img class="main-navigation-icon" src="~/images/icons/linkedin_icon.png" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/wesleyvankomen" target="_blank" alt="github link">
-                                <img class="main-navigation-icon" src="~/images/icons/github_icon.png" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://hackerrank.com/wesleyvankomen" target="_blank">
-                                <img class="main-navigation-icon" src="~/images/icons/hackerrank_icon.png" />
-                            </a>
-                        </li>
-                    </ul>
-
-                </div>
+            <!-- Navigation Collapser-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand" , alt="home link">RandomocityStudios</a>
             </div>
-        </nav>
 
-        @*<partial name="_CookieConsentPartial" />*@
+            <!-- Page Navigation-->
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav narbar-left">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Projects" alt="projects link">Projects</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About" alt="about me link">About Me</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="Resume" target="_blank" alt="resume link">
+                            <img class="main-navigation-icon" src="~/images/icons/resume_icon.png" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/vankomen" target="_blank" alt="linked link">
+                            <img class="main-navigation-icon" src="~/images/icons/linkedin_icon.png" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/wesleyvankomen" target="_blank" alt="github link">
+                            <img class="main-navigation-icon" src="~/images/icons/github_icon.png" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://hackerrank.com/wesleyvankomen" target="_blank">
+                            <img class="main-navigation-icon" src="~/images/icons/hackerrank_icon.png" />
+                        </a>
+                    </li>
+                </ul>
 
-        <div class="container body-content text-center">
-            @RenderBody()
-            <hr />
-            <footer>
-                <p>&copy; 2019 - RandomocityStudios</p>
-            </footer>
+            </div>
         </div>
+    </nav>
 
-    </body>
+    @*<partial name="_CookieConsentPartial" />*@
+
+    <div class="container body-content text-center">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2019 - RandomocityStudios</p>
+        </footer>
+    </div>
+
+</body>
 </html>

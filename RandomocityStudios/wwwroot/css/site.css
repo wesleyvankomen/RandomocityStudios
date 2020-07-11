@@ -1,5 +1,10 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
 for details on configuring this project to bundle and minify static web assets. */
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
 body {
     padding-top: 50px;
     padding-bottom: 20px;
@@ -8,6 +13,29 @@ body {
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: 100px 100px;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+#particles-js canvas {
+    display: block;
+    vertical-align: bottom;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+    transition: opacity .8s ease, transform 1.4s ease
+}
+
+#particles-js {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -10;
+    top: 0;
+    left: 0
 }
 
 ::-webkit-scrollbar {
@@ -185,10 +213,6 @@ a:hover {
        bottom: -10px;
 }
 
-.youtube-video{
-    min-width: 350px;
-}
-
 .medium-bottom-padding{
     padding-bottom: 25px;
 }
@@ -209,6 +233,3 @@ a:hover {
     margin-bottom: 15px;
 }
 
-.carousel-stopped {
-    interval: false
-}
