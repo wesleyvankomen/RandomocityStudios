@@ -47,6 +47,11 @@ p{
     font-size: 1.2em;
 }
 
+.paragraph {
+    padding-left: 15px;
+    padding-right: 15px
+}
+
 .paragraph p {
     line-height: 30px;
     margin: 10px;
@@ -232,5 +237,21 @@ a:hover {
 
 .small-bottom-margin {
     margin-bottom: 15px;
+}
+
+.tiny-margin {
+    margin: 10px;
+}
+
+.background-fill {
+    background-color: #222222;
+}
+
+.half-opacity-background {
+    background-color: rgba(34, 34, 34, .5);
+}
+
+.carousel-control.no-bg{
+    background-image: none;
 }
 
