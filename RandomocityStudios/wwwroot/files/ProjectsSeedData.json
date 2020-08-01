@@ -36,12 +36,21 @@
 
   "updates": [
     {
+      "title": "Introducing Elvis the Corgidor",
+      "description": "Welcome back to my site! Life has been a bit crazy since my last update. Between starting work at a new company, getting a new puppy, and trying to survive the pandemic, I haven't been writing as much code in my leisure time as I would like! Speaking of puppy, meet Elvis the Corgidor (Corgi + Labrador). He is a ball of energy that often distracts me from working on my math rpg game, but that is okay because he is so adorable! On the math rpg front, I will be launching a beta version of the game soon. Contact me via Linkedin or RandomocityStudios at the Gmail dot com -- you know the one.",
+      "imagepath": "/images/updates/Elvis.jpg",
+      "keywords": [ "puppy", "covid-19", "new job", "software developer", "cute dog" ],
+      "publishDate": "July 24th 2020",
+      "author": "Wesley"
+    },
+    {
       "title": "Randomocity Studios is live!",
       "description": "I'm proud to announce the official relaunch of Randomocity Studios! There are currently four projects available to view, source code and all. I've started work on an exciting new project that I hope to launch within the next few months -- think foundational math education meets turn based rpg. Check back for updates, because this site is always under construction!",
       "imagepath": "/images/updates/bannerUnderContruction.jpg",
       "keywords": [ "launch", "live", "randomocity studios", "randomocity", "first post" ],
-      "publishDate": "9/8/2019",
+      "publishDate": "September 8th 2019",
       "author": "Wesley"
     }
+
   ]
 }
