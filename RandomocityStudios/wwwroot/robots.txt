@@ -1,5 +1,4 @@
 ﻿User-agent: *
-Disallow:
 Allow: /
 Disallow: /Error
 
