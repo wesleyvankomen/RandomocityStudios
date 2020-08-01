@@ -106,19 +106,6 @@ p{
     }
 }
 
-.large-top-margin {
-    margin-top: 35px;
-}
-
-.medium-top-margin {
-    margin-top: 25px;
-}
-
-.small-top-margin {
-    margin-top: 15px;
-}
-
-
 li {
     color: #9d9d9d;
     text-align: left;
@@ -251,7 +238,29 @@ a:hover {
     background-color: rgba(34, 34, 34, .5);
 }
 
-.carousel-control.no-bg{
-    background-image: none;
+.medium-side-padding{
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
+.tiny-side-padding {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.x-tiny-side-margin {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.large-top-margin {
+    margin-top: 35px;
+}
+
+.medium-top-margin {
+    margin-top: 20px;
+}
+
+.small-top-margin {
+    margin-top: 15px;
+}
