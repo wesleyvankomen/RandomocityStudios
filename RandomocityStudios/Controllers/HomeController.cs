@@ -48,7 +48,7 @@ namespace RandomocityStudios.Controllers
                     _updates = projectArray.ToObject<List<NewsUpdate>>();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Console.WriteLine("Project data could not be successfully parsed");
             }
@@ -80,7 +80,7 @@ namespace RandomocityStudios.Controllers
                     _projects = projectArray.ToObject< List<Project>>();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Console.WriteLine("Project data could not be successfully parsed");
             }
@@ -115,7 +115,7 @@ namespace RandomocityStudios.Controllers
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Console.WriteLine("Project data could not be successfully parsed");
             }
