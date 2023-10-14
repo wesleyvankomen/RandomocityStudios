@@ -20,10 +20,10 @@ namespace RandomocityStudios.Controllers
     public class HomeController : Controller
     {
         
-        private readonly IHostingEnvironment _hostingEnvironment;
+        private readonly IWebHostEnvironment _hostingEnvironment;
         private readonly string _webRoot;
 
-        public HomeController(IHostingEnvironment hostingEnvironment)
+        public HomeController(IWebHostEnvironment hostingEnvironment)
         {
             _hostingEnvironment = hostingEnvironment;
             _webRoot = _hostingEnvironment.WebRootPath;
