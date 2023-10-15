@@ -32,39 +32,12 @@ namespace RandomocityStudios.Controllers
 
         public IActionResult Index()
         {
-
-            string _projectsDataFilePath = _webRoot + "/files/projectsSeedData.json";
-            List<NewsUpdate> _updates = new List<NewsUpdate>();
-
-            // get projects data from json
-            // TODO: use a DB instead of json once there are enough projects posts to justify doing so
-            try
-            {
-                using (StreamReader file = new StreamReader(_projectsDataFilePath))
-                using (JsonTextReader reader = new JsonTextReader(file))
-                {
-                    JObject jsonObject = (JObject)JToken.ReadFrom(reader);
-                    JToken projectArray = jsonObject.SelectToken("updates");
-                    _updates = projectArray.ToObject<List<NewsUpdate>>();
-                }
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Project data could not be successfully parsed");
-            }
-
-
-            ViewData["Updates"] = _updates;
-
-
             return View();
         }
 
         [Route("/Projects")]
         public IActionResult Projects()
         {
-            ViewData["Message"] = "Coming Soon!";
-
             string _projectsDataFilePath = _webRoot + "/files/projectsSeedData.json";
             List<Project> _projects = new List<Project>();
 
@@ -84,7 +57,6 @@ namespace RandomocityStudios.Controllers
             {
                 Console.WriteLine("Project data could not be successfully parsed");
             }
-            
 
             ViewData["Projects"] = _projects;
 
@@ -119,7 +91,6 @@ namespace RandomocityStudios.Controllers
             {
                 Console.WriteLine("Project data could not be successfully parsed");
             }
-
 
             // retrieve picture file paths
             List<string> pictures = Directory.GetFiles(directory, "*.jpg").ToList().Select(x => x.Split(_webRoot)[1]).ToList(); ;

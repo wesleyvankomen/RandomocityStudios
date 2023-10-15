@@ -10,10 +10,9 @@ body {
     padding-top: 50px;
     padding-bottom: 20px;
     background-color: #222222;
-    background-image: url(/images/background_texture_new.jpg);
-    background-repeat: repeat;
+    background-image: url(/images/green_fractal.jpg);
     background-attachment: fixed;
-    background-size: 100px 100px;
+    background-size: cover;
     height: 100vh;
     width: 100vw;
     max-width: 100%;
