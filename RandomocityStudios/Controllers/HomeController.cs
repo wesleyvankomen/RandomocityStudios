@@ -3,16 +3,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Nancy.Json;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RandomocityStudios.Models;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Net;
 using Microsoft.AspNetCore.Authorization;
 
 namespace RandomocityStudios.Controllers
