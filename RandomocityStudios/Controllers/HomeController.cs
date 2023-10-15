@@ -102,7 +102,7 @@ namespace RandomocityStudios.Controllers
         [Route("/Resume")]
         public IActionResult Resume()
         {
-            string path = _hostingEnvironment.WebRootPath + @"/files/wvk_resume_apr_2019.pdf";
+            string path = _hostingEnvironment.WebRootPath + @"/files/wvk_resume_sep_2023.pdf";
             var stream = new FileStream(path, FileMode.Open, FileAccess.Read);
             return File(stream, "application/pdf");
         }
