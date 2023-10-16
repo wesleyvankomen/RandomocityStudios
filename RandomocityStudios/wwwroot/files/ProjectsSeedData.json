@@ -1,9 +1,17 @@
 ﻿{
   "projects": [
     {
+      "title": "Ask Tatiana",
+      "description": "A simple implementation of OpenAI's chat API. Pre-prompting is used to solicit sage wisdom and comforting advise tailored to the user's entries.",
+      "tech": "NextJS, Node, React, HTML, CSS",
+      "imagepath": "/images/projects/ask_tatiana.jpg",
+      "source": "Available upon request",
+      "url": "https://ask-tatiana.vercel.app/"
+    },
+    {
       "title": "Randomocity Studios",
       "description": "My personal website that acts as a resume and portfolio of some of my work. You are on this site right now!",
-      "tech": "C#, .Net Core, JavaScript, JQuery, HTML, CSS, Bootstrap, fancybox",
+      "tech": "C#, .Net Core, JavaScript, JQuery, HTML, CSS, Bootstrap",
       "imagepath": "/images/projects/randomocity_studios.jpg",
       "source": "https://github.com/wesleyvankomen/RandomocityStudios",
       "url": ""
@@ -26,31 +34,11 @@
     },
     {
       "title": "WWU CBE Calculator",
-      "description": "A chrome extension for calculating the GPAs of students in the College of Business of Economics based on specific set of classes. This was part of my senior project at WWU, and I acted as the team lead for phase 2 development, having three other students on my development team. Our team provided several bug fixes, added user-friendly printer support, updated the grade replacement rules specific based on CBE policy change, and wrote a suite of unit tests to help ensure correctness",
+      "description": "A chrome extension for calculating the GPAs of students in the College of Business of Economics based on specific set of classes. This was part of my senior project at WWU, and I acted as the team lead for phase 2 development, having three other students on my development team. Our team provided several bug fixes, added user-friendly printer support, updated the grade replacement rules specific based on CBE policy change, and wrote a suite of unit tests to help ensure correctness.",
       "tech": "JavaScript, Angular, HTML, CSS, X-Editable",
       "imagepath": "/images/projects/wwu_cbe_calculator.jpg",
       "source": "https://github.com/wesleyvankomen/cbe-calc",
       "url": "https://chrome.google.com/webstore/detail/wwu-cbe-gpa-calculator/lkapdoedojaackmiippolfcncadkfebd?hl=en"
     }
-  ],
-
-  "updates": [
-    {
-      "title": "Introducing Elvis the Corgidor",
-      "description": "Welcome back to my site! Life has been a bit crazy since my last update. Between starting work at a new company, getting a new puppy, and trying to survive the pandemic, I haven't been writing as much code in my leisure time as I would like! Speaking of puppy, meet Elvis the Corgidor (Corgi + Labrador). He is a ball of energy that often distracts me from working on my math rpg game, but that is okay because he's so dang adorable! On the math rpg front, I will be launching a beta version of the game soon. Contact me via Linkedin or RandomocityStudios at the Gmail dot com -- you know the one -- if you want to participate.",
-      "imagepath": "/images/updates/Elvis.jpg",
-      "keywords": [ "puppy", "covid-19", "new job", "software developer", "cute dog" ],
-      "publishDate": "July 24th 2020",
-      "author": "Wesley"
-    },
-    {
-      "title": "Randomocity Studios is live!",
-      "description": "I'm proud to announce the official relaunch of Randomocity Studios! There are currently four projects available to view, source code and all. I've started work on an exciting new project that I hope to launch within the next few months -- think foundational math education meets turn based rpg. Check back for updates, because this site is always under construction!",
-      "imagepath": "/images/updates/bannerUnderContruction.jpg",
-      "keywords": [ "launch", "live", "randomocity studios", "randomocity", "first post" ],
-      "publishDate": "September 8th 2019",
-      "author": "Wesley"
-    }
-
   ]
 }
