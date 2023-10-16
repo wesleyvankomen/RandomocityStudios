@@ -14,18 +14,6 @@
     <h1>@ViewData["Title"]</h1>
 </div>
 
-
-
-<!--
- <div class="row display-flex">
-    <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="box">
-            <h3>Some text</h3>
-            <img src="//placehold.it/150x180" class="center-block">
-        </div>
-    </div>
--->
-
 <div class="col-sm-12 col-md-12 col-lg-12 tiny-side-padding">
     <div class="row display-flex">
         @foreach (Project project in ViewData["Projects"] as List<Project>)
@@ -48,9 +36,6 @@
                                 <img src="@project.ImagePath" width="100%" class="green-border" />
                             </a>
                         }
-
-
-
 
                         <div class="text-left medium-top-margin">
                             <p><b>Description:</b></p>
