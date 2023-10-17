@@ -1,8 +1,8 @@
 ﻿{
   "projects": [
     {
-      "title": "Ask Tatiana",
-      "description": "A simple implementation of OpenAI's chat API. Pre-prompting is used to solicit sage wisdom and comforting advise tailored to the user's entries.",
+      "title": "Ask Tatiana *WIP*",
+      "description": "A simple implementation of an app utilizing OpenAI's completion API. Pre-prompting is used to solicit sage wisdom and comforting advise tailored to the user's entries.",
       "tech": "NextJS, Node, React, HTML, CSS",
       "imagepath": "/images/projects/ask_tatiana.jpg",
       "source": "Available upon request",

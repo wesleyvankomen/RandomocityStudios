@@ -234,7 +234,13 @@ a:hover {
 }
 
 .half-opacity-background {
-    background-color: rgba(34, 34, 34, .5);
+    background-color: rgba(34, 34, 34, .8);
+}
+
+.tiled-background {
+    background-image: url(/images/mandala_3.png);
+    background-position: center;
+    background-size: 100%;
 }
 
 .medium-side-padding{
