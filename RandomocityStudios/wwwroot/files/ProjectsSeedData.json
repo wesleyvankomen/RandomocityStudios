@@ -1,7 +1,7 @@
 ﻿{
   "projects": [
     {
-      "title": "Ask Tatiana *WIP*",
+      "title": "Ask Tatiana",
       "description": "A simple app utilizing OpenAI's completion API to generate responses. Pre-prompting is used to solicit sage wisdom and comforting advice tailored to the user's entries. This app is hosted on Vercel's serverless hosting platform and uses Redis to limit the number requests originating from a single IP.",
       "tech": "Next.js, Node.js, React, Redis, HTML, TailwindCSS",
       "imagepath": "/images/projects/ask_tatiana.jpg",
@@ -10,7 +10,7 @@
     },
     {
       "title": "Randomocity Studios",
-      "description": "My personal website that acts as a resume and portfolio of some of my work. You are on this site right now!",
+      "description": "My personal website that acts as a resume and portfolio of some of my work. You are on this site right now! Recently upgraded from .Net Core 2.1 to 3.1.",
       "tech": "C#, .Net Core, JavaScript, JQuery, HTML, CSS, Bootstrap",
       "imagepath": "/images/projects/randomocity_studios.jpg",
       "source": "https://github.com/wesleyvankomen/RandomocityStudios",
