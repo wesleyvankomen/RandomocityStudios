@@ -1,0 +1,106 @@
+﻿<environment include="Development">
+    <link rel="stylesheet" href="~/css/comparison.css" />
+</environment>
+<environment exclude="Development">
+    <link rel="stylesheet" href="~/css/comparison.min.css" asp-append-version="true" />
+</environment>
+
+<div class="large-top-margin medium-side-margin" >
+
+
+<table class="large-top-margin">
+    <thead>
+    <tr>
+        <th></th>
+        <th>Integrity</th>
+        <th>Passion</th>
+        <th>Drive</th>
+        <th>Fast Learner</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>Wesley</th>
+        <td>✔</td>
+        <td>✔</td>
+        <td>✔</td>
+        <td>✔</td>
+    </tr>
+    <tr>
+        <th>Candidate 1</th>
+        <td>✔</td>
+        <td>✔</td>
+        <td>❌</td>
+        <td>❌</td>
+    </tr>
+    <tr>
+        <th>Candidate 2</th>
+        <td>❌</td>
+        <td>✔</td>
+        <td>❌</td>
+        <td>✔</td>
+    </tr>
+    <tr>
+        <th>Candidate 3</th>
+        <td>✔</td>
+        <td>❌</td>
+        <td>✔</td>
+        <td>❌</td>
+    </tr>
+    <tbody>
+</table>
+
+    <script>
+        //cell highlighting
+        $(document).ready(function() {
+            $("td").hover(
+            function() {
+                //$(this).css('background-color', '#ff0000');
+                //$(this).css('color', '#000000');
+                    if (this.textContent === "❌") {
+                        $(this).css('background-color', '#ff0f0f');
+                        $(this).css('color', '#000000');
+                    }
+                    else {
+                        $(this).css('background-color', '#009933');
+                        $(this).css('color', 'white');
+                    }
+
+                    var $th = (this).closest('th');
+
+                    console.log("highlighting")
+
+            }, 
+            function() {
+                //setTimeout(()=>{}, 500)
+                $(this).css('background-color', '');
+                $(this).css('color', 'green');
+                console.log("un-highlighting")
+            }
+            );
+        });
+
+        // row high light
+        $(document).ready(function() {
+            $("tr").hover(
+            function() {
+
+                var th = $(this).find("th");
+
+                if ($(th)[0].textContent === "Wesley") {
+                    $(th).css('background-color', '#009933');
+                }
+                else if ($(th)[0].textContent != "") {
+                    $(th).css('background-color', '#ff0f0f');
+                }
+
+            }, 
+            function() {
+                var th = $(this).find("th");
+                $(th).css('background-color', '');
+            }
+            );
+        });
+    </script>
+
+</div>

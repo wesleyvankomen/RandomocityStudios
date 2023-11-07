@@ -1,0 +1,130 @@
+﻿body {
+    padding: 5%;
+
+}
+
+table {
+    width: 90%;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    transform: scale(0.9);
+    color: transparent;
+    text-shadow: 2px 4px 4px black;
+}
+
+table th, table td {
+    padding: 0.5em 1em;
+    border: 1px solid #ccc;
+}
+
+table thead th,
+table tbody td {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+table thead {
+    color: white;
+    background: #009933;
+    empty-cells: hide;
+}
+
+    table thead th {
+        padding: 0em;
+    }
+
+table tbody th {
+    border-bottom: none;
+    align-content: center;
+    text-align: right;
+    font-size: 1.5em;
+    color: white;
+    padding-bottom: 0;
+    font-weight: 700;
+    vertical-align: central;
+}
+
+
+table tbody td {
+    color: green;
+    font-weight: 700;
+}
+
+.emptyCell {
+    border: 0px;
+    background: none;
+}
+
+/* change size for smaller screens */
+@media screen and (min-width: 1100px) {
+    table tbody td {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    table tbody th {
+        font-size: 2em;
+    }
+
+    table thead {
+        color: white;
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    table tbody td {
+        text-align: center;
+        font-size: 1em;
+    }
+
+    table tbody th {
+        font-size: 1em;
+    }
+
+    table thead {
+        color: white;
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    table tbody td {
+        text-align: center;
+        font-size: .75em;
+        text-shadow: 1px 2px 2px black;
+    }
+
+    table tbody th {
+        font-size: .75em;
+    }
+    table thead {
+        color: white;
+        font-size: .75em;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    table tbody td {
+        text-align: center;
+        font-size: .5em;
+        text-shadow: .5px 1px 1px black;
+    }
+
+    table tbody th {
+        font-size: .5em;
+    }
+    table thead {
+        color: white;
+        font-size: .5em;
+    }
+}
+
+/*    td:hover {
+        background-color: #ff0000;
+        color: #000000;
+    }*/

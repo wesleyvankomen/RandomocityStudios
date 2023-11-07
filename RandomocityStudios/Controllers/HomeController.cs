@@ -27,6 +27,12 @@ namespace RandomocityStudios.Controllers
 
         public IActionResult Index()
         {
+            string directory = _webRoot + "/images/corgis";
+
+            // retrieve picture file paths
+            List<string> pictures = Directory.GetFiles(directory, "*.jpg").ToList().Select(x => x.Split(_webRoot)[1]).ToList(); ;
+            ViewData["Pictures"] = pictures;
+
             return View();
         }
 
