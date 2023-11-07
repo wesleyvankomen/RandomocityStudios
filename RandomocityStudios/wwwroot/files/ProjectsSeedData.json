@@ -5,7 +5,7 @@
       "description": "A simple app utilizing OpenAI's completion API to generate responses. Pre-prompting is used to solicit sage wisdom and comforting advice tailored to the user's entries. This app is hosted on Vercel's serverless hosting platform and uses Redis to limit the number requests originating from a single IP.",
       "tech": "Next.js, Node.js, React, Redis, HTML, TailwindCSS",
       "imagepath": "/images/projects/ask_tatiana.jpg",
-      "source": "Available upon request",
+      "source": "https://github.com/wesleyvankomen/AskTatiana",
       "url": "https://ask-tatiana.vercel.app/"
     },
     {

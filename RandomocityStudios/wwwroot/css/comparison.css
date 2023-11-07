@@ -10,10 +10,10 @@
     text-shadow: 2px 4px 4px black;
 }
 
-table th, table td {
-    padding: 0.5em 1em;
-    border: 1px solid #ccc;
-}
+    table th, table td {
+        padding: .3em 1em;
+        border: 1px solid #ccc;
+    }
 
 table thead th,
 table tbody td {
@@ -37,9 +37,9 @@ table tbody th {
     text-align: right;
     font-size: 1.5em;
     color: white;
-    padding-bottom: 0;
+    padding-bottom: .2em;
     font-weight: 700;
-    vertical-align: central;
+    vertical-align: middle;
 }
 
 
