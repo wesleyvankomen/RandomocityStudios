@@ -10,8 +10,8 @@
     },
     {
       "title": "Randomocity Studios",
-      "description": "My personal website that acts as a resume and portfolio of some of my work. You are on this site right now! Recently upgraded from .Net Core 2.1 to 3.1.",
-      "tech": "C#, .Net Core, JavaScript, JQuery, HTML, CSS, Bootstrap",
+      "description": "My personal website that acts as a resume and living portfolio. You are on this site right now! Recently upgraded from .Net Core 2.1 to .Net 6.0!",
+      "tech": "C#, .NET Core, JavaScript, JQuery, HTML, CSS, Bootstrap",
       "imagepath": "/images/projects/randomocity_studios.jpg",
       "source": "https://github.com/wesleyvankomen/RandomocityStudios",
       "url": ""

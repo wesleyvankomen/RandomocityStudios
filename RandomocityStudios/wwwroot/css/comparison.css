@@ -53,7 +53,6 @@ table tbody td {
     background: none;
 }
 
-/* change size for smaller screens */
 @media screen and (min-width: 1100px) {
     table tbody td {
         text-align: center;
@@ -118,8 +117,3 @@ table tbody td {
         font-size: .5em;
     }
 }
-
-/*    td:hover {
-        background-color: #ff0000;
-        color: #000000;
-    }*/
