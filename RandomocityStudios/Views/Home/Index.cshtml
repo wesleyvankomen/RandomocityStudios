@@ -21,8 +21,8 @@
 
 <div class="col-sm-12 col-md-12 col-lg-12 styled-row small-top-margin" style="padding: 0px;">
 
-    <div class="medium-side-margin">
-        <h3 class="typography">This is the part where I'm supposed to tell you about why I'm a great developer that you want working for your team. Please refer to the table below for a quick comparison of how Wesley stacks up to other candidates.</h3>
+    <div>
+        <h3 class="typography small-top-padding medium-side-margin">This is the part where I'm supposed to tell you about why I'm a great developer that you want working for your team. Please refer to the table below for a quick comparison of how Wesley stacks up to other candidates.</h3>
     </div>
 
     <partial name="~/Views/Shared/_ComparisonPartial.cshtml" />
@@ -31,21 +31,20 @@
 
 <div class="col-sm-12 col-md-12 col-lg-12 styled-row small-top-margin" style="padding: 0px;">
 
-    <div class="medium-side-margin">
-        <h3 class="typography">I have a strong background in core web technologies (HTML, CSS, JavaScript) and Microsoft Technologies (Azure, C#, .Net, T-SQL, TypeScript). Please visit the "Projects" page to view example of things I have built. </h3>
+    <div>
+        <h3 class="typography small-top-padding medium-side-margin">I have a strong background in core web technologies (HTML, CSS, JavaScript) and Microsoft Technologies (Azure, C#, .Net, T-SQL, TypeScript). Please visit the "Projects" page to view examples of things I have built. </h3>
     </div>
 
 </div>
 
 <div class="col-sm-12 col-md-12 col-lg-12 styled-row small-top-margin" style="padding: 0px;">
 
-    <div class="medium-side-margin">
-        <h3 class="typography">Still not sure? Please take a moment to enjoy these AI Generated corgis.</h3>
+    <div>
+        <h3 class="typography small-top-padding medium-side-margin">Still not sure? Please take a moment to enjoy these AI Generated corgis.</h3>
 
     </div>
 
-    <div class="col-sm-12 col-md-12 col-lg-12 large-top-margin" >
-        <div id="corgis" class="carousel slide" data-interval="2500" data-ride="carousel">
+        <div id="corgis" class="carousel slide green-border" data-interval="2500" data-ride="carousel"  style="transform: scale(0.9);">
 
 @*            <!-- Indicators -->
             <ul class="carousel-indicators">
@@ -62,7 +61,7 @@
                     {
                     <div class="item active">
                         <a href="@pictures[i]" data-fancybox="pictures" data-options='{"loop": true}' data-caption="AI Generated Corgi">
-                            <img src="@pictures[i]" style="width:100%; height:100%;">
+                            <img src="@pictures[i]" style="width:100%;">
                         </a>
                     </div>
                     }
@@ -70,7 +69,7 @@
                     {
                     <div class="item">
                         <a href="@pictures[i]" data-fancybox="pictures" data-options='{"loop": true}' data-caption="AI Generated Corgi">
-                            <img src="@pictures[i]" style="width:100%; height:100%;">
+                            <img src="@pictures[i]" style="width:100%;">
                         </a>
                     </div>
                     }
@@ -88,6 +87,5 @@
             </a>
 
         </div>
-    </div>
 
-                </div>
+    </div>
