@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0"/>
     <title>@ViewData["Title"] - RandomocityStudios</title>
 
-    <link rel="icon" href="/images/favicon/sun_favicon/sun_favicon_1.png" type="image/png" />
+    <link rel="icon" href="~/images/favicon/sun_favicon/sun_favicon_1.png" type="image/png" />
+    <link rel="preload" as="image" href="~/images/green_fractal.jpg" />
 
     <meta name="yandex-verification" content="ec42f71f32c57c77" />
 
@@ -44,6 +45,7 @@
 
 </head>
 <body>
+    <div id="background">     </div>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -120,6 +122,16 @@
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'UA-147159512-1');
+
+        //mobile background resize issue hack
+        var bg = $("#background");
+
+        function resizeBackground() {
+            bg.height($(window).height() + 120);
+        }
+
+        $(window).resize(resizeBackground);
+        resizeBackground();
     </script>
 
 </body>
