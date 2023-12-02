@@ -7,7 +7,7 @@
     margin-right: auto;
     transform: scale(0.9);
     color: transparent;
-    text-shadow: 2px 4px 4px black;
+    text-shadow: 2px 2px 4px black;
 }
 
     table th, table td {
@@ -53,7 +53,7 @@ table tbody td {
     background: none;
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1200px) {
     table tbody td {
         text-align: center;
         font-size: 2em;
@@ -69,27 +69,57 @@ table tbody td {
     }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1199px) {
+    table {
+        transform: scale(.95);
+        width: 95%;
+    }
+
+    table tbody td {
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    table tbody th {
+        font-size: 1.5em;
+    }
+
+    table thead {
+        color: white;
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    table {
+        transform: scale(1);
+        width: 100%;
+    }
     table tbody td {
         text-align: center;
         font-size: 1em;
+        text-shadow: 1px 1px 2px black;
     }
 
     table tbody th {
         font-size: 1em;
     }
-
     table thead {
         color: white;
         font-size: 1em;
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
+    table {
+        transform: scale(1);
+        width: 100%;
+    }
+
     table tbody td {
         text-align: center;
         font-size: .75em;
-        text-shadow: 1px 2px 2px black;
+        text-shadow: .5px .5px .5px black;
     }
 
     table tbody th {
@@ -98,22 +128,5 @@ table tbody td {
     table thead {
         color: white;
         font-size: .75em;
-    }
-}
-
-
-@media screen and (max-width: 500px) {
-    table tbody td {
-        text-align: center;
-        font-size: .5em;
-        text-shadow: .5px 1px 1px black;
-    }
-
-    table tbody th {
-        font-size: .5em;
-    }
-    table thead {
-        color: white;
-        font-size: .5em;
     }
 }
