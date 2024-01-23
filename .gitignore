@@ -1,8 +1,9 @@
 Randomocitystudios/obj/*
 Randomocitystudios/bin/*
 Randomocitystudios/Properties/PublishProfiles
-Randomocitystudios/wwwroot/css/site.min.css
-Randomocitystudios/wwwroot/js/site.min.js
+
+*.min.js
+*.min.css
 *.psd
 *.swp
 *.sh
@@ -10,5 +11,3 @@ Randomocitystudios/wwwroot/js/site.min.js
 *.user
 .vs/
 *.DS_Store
-RandomocityStudios/wwwroot/css/comparison.min.css
-RandomocityStudios/wwwroot/css/comparison.min.css
