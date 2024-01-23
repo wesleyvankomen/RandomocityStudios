@@ -74,7 +74,7 @@
 
             <div class="green-border small-top-margin tiny-margin">
 
-                <div id="pictureCarousel" class="carousel slide" data-interval="3500" data-ride="carousel">
+                <div id="pictureCarousel" class="carousel slide lazy-load" data-interval="3500" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
                         <li data-target="#pictureCarousel" data-slide-to="0" class="active"></li>
@@ -104,7 +104,7 @@
                         {
                         <div class="item">
                             <a href="@pictures[i]" data-fancybox="pictures" data-options='{"loop": true}' data-caption="">
-                                <img src="@pictures[i]">
+                                <img data-src="@pictures[i]">
                             </a>
                         </div>
                         }
@@ -162,16 +162,18 @@
 
     </div>
 
+@section scripts
+{
+    <script src="~/js/LazyLoader.js"></script>
+    <script src="~/js/YouTubePlayerController.js"></script>
+}
 
-    <!-- inline script to auto stop video when the selection is changed and stop auto change-->
-    <script>
-        function stopVideo() {
-            this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
-        }
+    
 
-        $('#musicLeft').add('#musicRight').add(".carousel-selector-pull-down").click(function () {
-            $('.yt_player_iframe').each(stopVideo);
-        });
-    </script>
 
-    @*</div>*@
+
+
+
+
+
+
