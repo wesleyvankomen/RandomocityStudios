@@ -53,11 +53,11 @@ setInterval(function () {
 
 
 // update active link
-$(document).ready(function () {
-    var url = window.location;
+$(function () {
+    var url = window.location.href;
     $('.navbar .nav').find('.active').removeClass('active');
     $('.navbar .nav li a').each(function () {
-        if (this.href == url) {
+        if (this.href === url) {
             $(this).parent().addClass('active');
         }
     });

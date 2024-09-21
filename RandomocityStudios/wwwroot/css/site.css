@@ -89,6 +89,11 @@ p{
 
 }
 
+.responsive-img {
+    width: 100%;
+    height: auto;
+}
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
