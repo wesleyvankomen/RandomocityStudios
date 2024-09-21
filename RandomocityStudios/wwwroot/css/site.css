@@ -29,7 +29,6 @@ body {
     right: 0;
     background-image: url(/images/green_fractal.jpg);
     background-size: cover;
-    -moz-background-size: cover;
     z-index: -10;
 }
 
