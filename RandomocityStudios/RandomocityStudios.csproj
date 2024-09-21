@@ -11,4 +11,10 @@
     <PackageReference Include="Nancy" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="wwwroot\js\imageLoader.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

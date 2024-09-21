@@ -11,3 +11,5 @@ Randomocitystudios/Properties/PublishProfiles
 *.user
 .vs/
 *.DS_Store
+RandomocityStudios/wwwroot/js/particles/particles.min.js
+RandomocityStudios/wwwroot/js/particles/particles.min.js
